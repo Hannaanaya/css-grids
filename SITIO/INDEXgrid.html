@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--  <link rel="stylesheet" href="css/estilos.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <title>Mi sitio</title>
+    <style>
+      @font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?gwwi9f');
+  src:  url('fonts/icomoon.eot?gwwi9f#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?gwwi9f') format('truetype'),
+    url('fonts/icomoon.woff?gwwi9f') format('woff'),
+    url('fonts/icomoon.svg?gwwi9f#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-instagram:before {
+  content: "\e903";
+  color: #e4405f;
+}
+.icon-wattpad:before {
+  content: "\e902";
+  color: #f68d12;
+}
+.icon-facebook:before {
+  content: "\e901";
+  color: #1877f2;
+}
+.icon-twitter:before {
+  content: "\e900";
+  color: #1da1f2;
+}
+    
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+        margin: 0;
+        display: flex;
+        perspective: 200px;
+    }
+    
+    h1,
+    h2 {
+      font-family: 'Libre Baskerville', serif;
+    }
+    h3,
+    h5,
+    h6 {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: bold;
+    /*         font-size: 24px;
+        margin-bottom: 40px; */
+      }
+    
+    h2 {
+      /* font-family: 'Fjalla One', sans-serif; */
+      font-weight: normal;
+    }
+    
+    .container {
+                display :grid;
+                grid-gap: 5px;
+                grid-template: 100px 1fr 150px / 200px 1fr;
+                grid-gap: 10px;
+                height: 100vh; 
+                grid-template-areas:"header header"
+                                    "left contenido"
+                                    "footer footer";
+            }
+            .item {
+                padding: 5px;
+                /* border: 1px solid red; */
+            }
+            .header {
+                grid-area: header;
+                display: flex;
+                background: crimson;
+                color: white;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+      .inicio {
+      padding: 20px;
+      }
+      .titu {
+      margin-left: 5%;
+      margin-bottom: 0;
+
+      }
+      .home {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(200px, auto);
+      }
+      .project {
+      margin: 1%;
+      margin-top: 5%;
+      margin-left: 2%;
+      /* width: 50%; */
+      /* height: 50%; */
+      border: 1px solid gray;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+     }
+     .project-course,
+     .project-cate,
+     .project-genero {
+       margin: 10px 0;
+     }
+     .project-sinopsis {
+      font-size: 15px;
+    }
+    .project strong {
+      font-family: ;
+    }
+    .project-tittle {
+      font-size: 20px;
+      margin-top: 1%;
+    }
+    .project-details {
+      width: 50%;
+    }
+    .project-imageContainer {
+      width: 50%;
+      transition: .3s;
+    }
+    .project:hover .project-imageContainer {
+      transform: translate(-30px);
+      transform: translateZ(30px);
+      perspective-origin: center;
+    }
+    .project-imageContainer img {
+      max-width: 100%;
+    }
+
+    .galery {
+      /* padding: 20px; */
+      padding: 2px;
+    }
+    .bibliotec {
+      /* display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: minmax(200px, auto); */
+    }
+    
+    .gale {
+      margin: 1%;
+      margin-top: 5%;
+      margin-left: 2%;
+      margin-right: 2%;
+      border: 1px solid gray;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .gale-tittle {
+      margin-left: 5%;
+      position: absolute;
+      
+    }
+    .gale-imageContainer {
+      width: 100%;
+      transition: .3s;
+    }
+    /* .gale:hover .gale-imageContainer {
+      transform: translate(-30px);
+      transform: translateZ(30px);
+      perspective-origin: center;
+    } */
+    .gale-imageContainer img {
+      max-width: 100%;
+    }
+
+
+            .contact {
+              padding: 20px;
+            }
+            .social-link {
+               display: inline-block;
+               width: 50px;
+               height: 50px;
+               margin: 0 10px;
+               background-size: 50px 50px;
+            }
+            .social-link.wattpad {
+               background-image: url('../images/wattpad.svg');
+            }
+            .social-link.twitter {
+               background-image: url('../images/twitter.svg');
+            }
+            .social-link.facebook {
+               background-image: url('../images/facebook.svg');
+            }
+            .social-link.instagram {
+               background-image: url('../images/instagram.svg');
+            }
+
+            ol,
+            ul {
+               margin: 0;
+               padding: 0;
+               list-style: none;
+            }
+            figure  {
+            margin: 0;
+           }
+            .header a {
+            color: white;
+            text-decoration: none;
+           }
+    
+            .logo {
+            grid-area: logo;
+          }
+    
+            .logo img {
+            padding: 10px 10px;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+          }
+          .form-tittle input {
+            display: inline-flex;
+            border-color: white;
+            align-items: center;
+            border-radius: 5px;
+            padding: 10px 20px 10px 50px;
+            border-bottom-right-radius: 5px;
+            font-size: 16px; 
+          }
+    
+          .form-tittle button {
+            background: transparent;
+            color: white;
+            padding: 10px 0;
+            border-radius: 5px;
+            width: 100px;
+            margin-top: 10px;
+          }
+
+            .left {
+                grid-area: left;
+            }
+            .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            background-color: black;
+            height: 1700px; 
+          }
+            .menu {
+                /* position: relative; */
+            }
+            .menu ol {
+                display: block;
+                margin-top: 400px;
+            }
+            .menu ol li {
+                height: 150px;
+            }
+            .menu a {
+                color: white;
+                font-weight: 600;
+                text-decoration: none;
+                justify-content: center;
+                font-size: 2em;
+                margin-bottom: 5em;
+            }
+    
+    
+    
+            .contenido {
+                grid-area: contenido;
+            }
+            .home {
+              /* justify-content: right; */
+            }
+     
+            .bibliotec {
+                padding: 20px;
+            } 
+            .contact {
+                height: 150px;
+                display: flex;
+                margin-left: 2%;
+                margin-right: auto;
+                border: 1px solid gray;
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 15px;
+                justify-content: space-between;
+                background-color: #056fff;
+                color: white;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            .social-link {
+               display: inline-block;
+               width: 50px;
+               height: 50px;
+               margin: 0 10px;
+               background-size: 50px 50px;
+            }
+            .social-link.wattpad {
+               background-image: url('../images/wattpad.svg');
+            }
+            .social-link.twitter {
+               background-image: url('../images/twitter.svg');
+            }
+            .social-link.facebook {
+               background-image: url('../images/facebook.svg');
+            }
+            .social-link.instagram {
+               background-image: url('../images/instagram.svg');
+            }
+       
+            .footer {
+                grid-area: footer;
+            }
+            .menu-infe {
+              background: crimson;
+              text-align: center;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .menu-infe ol {
+                display: block;
+                
+            }
+            .menu-infe ol li {
+                padding: 2px;
+            }
+            .menu-infe a {
+                text-decoration: none;
+                justify-content: center;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+                  <section class="container">
+                    <div class="item header">
+                      <figure class="logo">
+                        <img src="images/logo.jpg" height="50" alt=""/>
+                      </figure>
+                      <h1>¡Conoce a BlondMasked...!</h1>
+                      <form action="/suscription/" class="form-tittle">
+                        <input type="text" placeholder="Busca una historia" id="titulo">
+                        <button>Buscar</button>
+                      </form>
+                    </div>
+
+                    <div class="item left">
+                      <nav class="menu">
+                        <ol>
+                            <li>
+                              <a class="link" href="#inicio">Inicio</a>
+                            </li>
+                            <li>
+                              <a class="link" href="#galery">Galería</a>
+                            </li>
+                            <li>
+                              <a class="link" href="#contacto">Redes sociales</a>
+                            </li>
+                          </ol>
+                      </nav>
+                    </div>
+
+                    <div class="item-contenido">
+                      <h2 class="titu">Mis historias</h2>
+                      <section id="inicio" class="home">
+                        <article class="project">
+                          <div class="project-details">
+                            <h3 class="project-tittle">Condena Sangrienta</h2>
+                            <h6 class="project-course"><strong>ADVERTENCIA</strong> de abuso sexual, violencia gráfica y lenguaje inapropiado</h6>
+                            <p class="project-cate"><strong>Categoría: </strong>+16</p>
+                            <p class="project-genero"><strong>Género:</strong> Fantasía</p>
+                            <p class="project-sinopsis"><strong>Sinopsis</strong> Trae maldiciones a donde sus pies tocan la tierra.
+                              La carga que se le ha otorgado no podrá dejarla incluso con su muerte, tiene una misión que deberá cumplir.
+                              En ese mundo de misterio, magia perdida en el tiempo y fantásticos individuos,
+                              solo unos excepcionales humanos podrán salvarlo, claro que, con el riesgo de perder la vida en el camino.
+                              ¿Qué tan lejos estarán dispuestos a llegar por él?
+                              </p>
+                          </div>
+                          <figure class="project-imageContainer">
+                            <img class="project-image"  width="300"" src="images/portada.jpg" HSPACE="10" VSPACE="10" alt="">
+                          </figure>
+                        </article>
+                          <article class="project">
+                            <div class="project-details">
+                              <h3 class="project-tittle">Mis poemas</h2>
+                              <p class="project-cate"><strong>Categoría: </strong>Todo público</p>
+                              <p class="project-genero"><strong>Género: </strong>Poesía</p>
+                              <p class="project-sinopsis"><strong>Sinopsis: </strong>La definición de las emociones es diferente para todos.</p>
+                            </div>
+                            <figure class="project-imageContainer">
+                              <img class="project-image" src="images/descarga.jpg" width="300" height="400" alt="">
+                            </figure>
+                          </article>
+                      </section>
+
+                      <section id="galery" class="bibliotec">
+                          <h2 class="gale-tittle">Galería</h2>
+                          <article class="gale">
+                            <figure class="gale-imageContainer">
+                            <img src="CS/aldea.jpg" width="250" height="350" HSPACE="10" VSPACE="10" alt="">
+                            <img class="gale-image" src="images/bosque (1).jpg" width="250" height="350" HSPACE="10" VSPACE="10">
+                            <img class="gale-image" src="images/bosque (2).jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/bosque (3).jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/bosque (4).jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/cueva.jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/luna.jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/651e9df7-ea2c-401d-8972-b4a9efb5f622.jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            <img class="gale-image" src="images/azul.jpg" width="250" height="350" HSPACE="10" VSPACE="10"alt="">
+                            </figure>
+                          </article>
+                    </section>
+
+                    <section id="contacto" class="contact">
+                      <h2>Redes sociales</h2>
+                      <div class="social">
+                          <a href="https://www.wattpad.com/user/BlondMasked20" class="social-link wattpad"></a>
+                          <a href="https://twitter.com/BlondMasked" class="social-link twitter"></a>
+                          <a href="https://www.facebook.com/hanna.anaya.96/" class="social-link facebook"></a>
+                          <a href="https://www.instagram.com/maskedblond2/?hl=es-la" class="social-link instagram"></a>
+                      </div>
+               </section>
+                    </div>
+                    <div class="item footer">
+                      <div class="menu-infe">
+                        <ol>
+                          <li>
+                            <a class="link" href="#inicio">Inicio</a> - 
+                          </li>
+                          <li>
+                            <a class="link" href="#galery">Galería</a> - 
+                          </li>
+                          <li>
+                            <a class="link" href="#contacto">Redes sociales</a> 
+                          </li>
+                        </ol>
+                      </div>
+                    </div>
+                      
+</body>
+</html>

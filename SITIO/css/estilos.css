@@ -1,0 +1,339 @@
+/* @font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?gwwi9f');
+    src:  url('fonts/icomoon.eot?gwwi9f#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?gwwi9f') format('truetype'),
+      url('fonts/icomoon.woff?gwwi9f') format('woff'),
+      url('fonts/icomoon.svg?gwwi9f#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .icon-instagram:before {
+    content: "\e903";
+    color: #e4405f;
+  }
+  .icon-wattpad:before {
+    content: "\e902";
+    color: #f68d12;
+  }
+  .icon-facebook:before {
+    content: "\e901";
+    color: #1877f2;
+  }
+  .icon-twitter:before {
+    content: "\e900";
+    color: #1da1f2;
+  } */
+
+  @font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?y0x07p');
+    src:  url('../fonts/icomoon.eot?y0x07p#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?y0x07p') format('truetype'),
+      url('../fonts/icomoon.woff?y0x07p') format('woff'),
+      url('../fonts/icomoon.svg?y0x07p#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\e900";
+  }
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2 {
+  font-family: 'Libre Baskerville', serif;
+}
+h3,
+h5,
+h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+/*         font-size: 24px;
+    margin-bottom: 40px; */
+  }
+
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+}
+
+.hero {
+  height: 80%;
+  align-items: initial; 
+  display: block;
+ }
+.inicio {
+  background: #fafafa;
+  padding: 20px;
+}
+.galery {
+  padding: 20px;
+}
+.titu {
+  margin-left: 8%;
+  position: absolute;
+}
+
+.project {
+  margin: 1%;
+  margin-top: 5%;
+  margin-left: 2%;
+  width: 50%;
+  height: 50%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: white;
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+ }
+ .project-course,
+ .project-cate,
+ .project-genero {
+   margin: 10px 0;
+ }
+ .project-sinopsis {
+  font-size: 15px;
+}
+.project strong {
+  font-family: ;
+}
+.project-tittle {
+  font-size: 20px;
+  margin-top: 1%;
+}
+
+.project-details {
+  width: 50%;
+}
+
+.project-imageContainer {
+  width: 50%;
+}
+
+.project-imageContainer img {
+  max-width: 100%;
+}
+.galery {
+  background: #fafafa;
+  padding: 20px;
+}
+.gale {
+  margin: 1%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: auto;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.gale-tittle {
+  margin-left: 5%;
+  position: absolute;
+  
+}
+.gale-imageContainer {
+  width: 100%;
+}
+.gale-imageContainer img {
+  max-width: 100%;
+  transition: .3s;
+}
+
+  .header {
+    display: flex;
+    background: crimson;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+  } 
+
+    ol,
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+   }
+
+    figure  {
+        margin: 0;
+    }
+    .header a {
+        color: white;
+        text-decoration: none;
+      }
+    .menu {
+        grid-area: menu;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-content: space-around;
+        text-align: center;
+        background-color: black;
+        width: 80px;
+        height: 1000px;
+      }
+
+      .logo {
+        grid-area: logo;
+      }
+
+      .logo img {
+        padding: 10px 10px;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+      }
+      .container {
+        /* max-width: 1000px; */
+        width: 100%;
+        flex: 1;
+        margin: 0 auto;
+        /* display: inherit; */
+        display: flex;
+        justify-content: inherit;
+        align-items: inherit;
+        height: inherit;
+        flex-wrap: inherit;
+      }
+/*       .container:hover .menu {
+        justify-content: left;
+      }
+      .container:hover .project {
+        justify-content: right;
+      } */
+      .form-tittle input {
+        display: inline-flex;
+        border-color: white;
+        align-items: center;
+        border-radius: 5px;
+        padding: 10px 20px 10px 50px;
+        border-bottom-right-radius: 5px;
+        font-size: 16px; 
+      }
+
+      .form-tittle button {
+        background: transparent;
+        color: white;
+        padding: 10px 0;
+        border-radius: 5px;
+        width: 100px;
+        margin-top: 10px;
+      }  
+
+.home {
+    position: relative;
+    display: block;
+}
+.home ol {
+  display: block;
+ }
+ .home ol li {
+  height: 50px;
+ }
+ .home a {
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  font-size: 1em;
+  margin-bottom: 5em;
+ } 
+
+.bibliotec {
+    padding: 20px;
+} 
+
+.project-tittle {
+    font-size: 30px;
+    margin-top: 0em;
+    margin-bottom: 10px;
+}
+
+.project-imageContainer {
+    width: 50%;
+  }
+  
+  .project-imageContainer img {
+    max-width: 100%;
+    font-size: 20px;
+  } 
+
+  .contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+.social-link {
+  display: inline-block;
+width: 50px;
+height: 50px;
+margin: 0 10px;
+background-size: 50px 50px;
+} 
+
+.social-link.wattpad {
+background-image: url('../images/wattpad.svg');
+}
+
+.social-link.twitter {
+background-image: url('../images/twitter.svg');
+}
+.social-link.facebook {
+background-image: url('../images/facebook.svg');
+}
+.social-link.instagram {
+background-image: url('../images/instagram.svg');
+} 
